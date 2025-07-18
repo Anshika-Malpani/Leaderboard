@@ -11,7 +11,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.get('/', (req, res) => {
-  res.send('Sucess')
+  res.send('Success')
 });
 app.use('/api', userRoutes);
 
