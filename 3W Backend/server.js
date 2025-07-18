@@ -11,9 +11,8 @@ app.use(cors());
 app.use(express.json());
 app.use('/api', userRoutes);
 
-console.log(process.env.MONGODB_URL);
 
 
 mongoose.connect(process.env.MONGODB_URL, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => app.listen(5000, () => console.log('Server running on http://localhost:5000')))
+  .then(() => app.listen(5000, () => console.log('Server running on https://leaderboard-6uko.onrender.com')))
   .catch(err => console.error(err));
