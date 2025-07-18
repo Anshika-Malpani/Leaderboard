@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const userRoutes = require('./routes/users');
+const port = process.env.PORT || 4000
 
 
 require('dotenv').config();
@@ -14,5 +15,5 @@ app.use('/api', userRoutes);
 
 
 mongoose.connect(process.env.MONGODB_URL, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => app.listen(5000, () => console.log('Server running on https://leaderboard-6uko.onrender.com')))
+  .then(() => app.listen(port, () => console.log(`Server running on port ${port}`)))
   .catch(err => console.error(err));
