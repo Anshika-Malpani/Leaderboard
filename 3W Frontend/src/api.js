@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API = axios.create({ baseURL: 'https://leaderboard-backend-gsv2.onrender.com' });
+const API = axios.create({ baseURL: 'https://leaderboard-6uko.onrender.com/api' });
 
 export const fetchUsers = () => API.get('/users');
 export const addUser = (name) => API.post('/users', { name });
